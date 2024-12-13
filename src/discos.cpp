@@ -1,4 +1,4 @@
-#include "../includes/discos.hpp"
+#include "discos.hpp"
 #include <filesystem> 
 #include <iostream>
 
