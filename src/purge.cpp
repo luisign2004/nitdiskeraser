@@ -36,7 +36,19 @@ bool overwriteFile(const std :: string & filePath, size_t passes = 3){
 }
 
 // função para excluir os arquivos
+bool deleteFile(const std :: string &filePath){
+    try{
+        if (fs::remove(filePath)){
+            std :: cout << "Arquivo excluído com sucesso: " << filePath << std::endl;
+        } else {
+            std :: cout << "Erro não foi possível excluir o arquivo: " << filePath << std::endl;
 
+        }
 
+    } catch (const std::exception &e){
+            std :: cout << "Erro ao excluir o arquivo: " << e.what() << std::endl;
+            return false;
+    }
+}
 // função para processar arquivos
 
